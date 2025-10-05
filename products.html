@@ -1,0 +1,353 @@
+<!doctype html>
+<html lang="ru">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Продукты - ContainerPro</title>
+		<link rel="stylesheet" href="style.css" />
+	</head>
+	<body>
+		<header>
+			<nav class="navbar">
+				<div class="nav-brand">
+					<h2>ContainerPro</h2>
+				</div>
+				<ul class="nav-menu">
+					<li><a href="index.html">Главная</a></li>
+					<li><a href="products.html" class="active">Продукты</a></li>
+					<li><a href="about.html">О нас</a></li>
+					<li><a href="contact.html">Контакты</a></li>
+				</ul>
+				<div class="hamburger">
+					<span></span>
+					<span></span>
+					<span></span>
+				</div>
+			</nav>
+		</header>
+
+		<section class="page-header">
+			<div class="container">
+				<h1>Наши продукты</h1>
+				<p>Широкий выбор контейнерных решений для любых задач</p>
+			</div>
+		</section>
+
+		<section class="page-content">
+			<div class="container">
+				<!-- Filter Buttons -->
+				<div class="filters">
+					<button class="filter-btn btn btn-outline active" data-filter="all">
+						Все продукты
+					</button>
+					<button class="filter-btn btn btn-outline" data-filter="living">
+						Жилые
+					</button>
+					<button class="filter-btn btn btn-outline" data-filter="office">
+						Офисные
+					</button>
+					<button class="filter-btn btn btn-outline" data-filter="commercial">
+						Коммерческие
+					</button>
+				</div>
+
+				<!-- Products Grid -->
+				<div class="products-grid">
+					<!-- Living Containers -->
+					<div
+						class="product-card product-item"
+						data-category="living"
+						id="living">
+						<div class="product-image-real">
+							<img
+								src="images/living-container-sec-page.jfif"
+								alt="Жилой дом Комфорт" />
+
+							<div class="product-badge">Жилое</div>
+						</div>
+						<div class="product-content">
+							<div class="product-header">
+								<h3 class="product-title">Жилой дом "Комфорт"</h3>
+								<div class="product-price">от 1 200 000 ₽</div>
+								<div class="product-period">под ключ</div>
+							</div>
+
+							<p class="product-description">
+								Просторный жилой дом из 2-3 контейнеров с полной отделкой и
+								коммуникациями
+							</p>
+
+							<div class="product-features">
+								<div class="product-feature">Площадь: 50-75 м²</div>
+								<div class="product-feature">
+									Спальня, гостиная, кухня, санузел
+								</div>
+								<div class="product-feature">Полная теплоизоляция</div>
+								<div class="product-feature">Готов к проживанию</div>
+								<div class="product-feature">Срок реализации: 3-4 недели</div>
+							</div>
+
+							<div class="product-actions">
+								<a href="contact.html" class="product-btn product-btn-primary">
+									Заказать консультацию
+								</a>
+								<button
+									class="product-btn product-btn-secondary"
+									onclick="showProductDetails('comfort')">
+									Подробнее
+								</button>
+							</div>
+						</div>
+					</div>
+
+					<div class="product-card product-item" data-category="living">
+						<div class="product-image-real">
+							<img
+								src="images/container-for-dacha.jfif"
+								alt="Жилой дом Комфорт" />
+							<div class="product-badge">Жилое</div>
+						</div>
+						<div class="product-content">
+							<div class="product-header">
+								<h3 class="product-title">Дачный домик "Эко"</h3>
+								<div class="product-price">от 600 000 ₽</div>
+								<div class="product-period">базовая комплектация</div>
+							</div>
+
+							<p class="product-description">
+								Компактный и уютный домик для загородного отдыха
+							</p>
+
+							<div class="product-features">
+								<div class="product-feature">Площадь: 25-30 м²</div>
+								<div class="product-feature">
+									Гостиная-кухня, спальня, санузел
+								</div>
+								<div class="product-feature">Экологичные материалы</div>
+								<div class="product-feature">Быстрый монтаж</div>
+								<div class="product-feature">Срок реализации: 2-3 недели</div>
+							</div>
+
+							<div class="product-actions">
+								<a href="contact.html" class="product-btn product-btn-primary">
+									Заказать консультацию
+								</a>
+								<button
+									class="product-btn product-btn-secondary"
+									onclick="showProductDetails('eco')">
+									Подробнее
+								</button>
+							</div>
+						</div>
+					</div>
+
+					<!-- Office Containers -->
+					<div
+						class="product-card product-item"
+						data-category="office"
+						id="office">
+						<div class="product-image-real">
+							<img
+								src="images/office-container-2.jpg"
+								alt="Офисный модуль Бизнес" />
+							<div class="product-badge">Офисное</div>
+						</div>
+						<div class="product-content">
+							<div class="product-header">
+								<h3 class="product-title">Офисный модуль "Бизнес"</h3>
+								<div class="product-price">от 800 000 ₽</div>
+								<div class="product-period">готовое решение</div>
+							</div>
+
+							<p class="product-description">
+								Современное офисное пространство для команды до 10 человек
+							</p>
+
+							<div class="product-features">
+								<div class="product-feature">Площадь: 40-60 м²</div>
+								<div class="product-feature">Рабочие места, переговорная</div>
+								<div class="product-feature">Кондиционирование</div>
+								<div class="product-feature">Готов к работе за 2 недели</div>
+								<div class="product-feature">Возможность расширения</div>
+							</div>
+
+							<div class="product-actions">
+								<a href="contact.html" class="product-btn product-btn-primary">
+									Заказать консультацию
+								</a>
+								<button
+									class="product-btn product-btn-secondary"
+									onclick="showProductDetails('business')">
+									Подробнее
+								</button>
+							</div>
+						</div>
+					</div>
+
+					<div class="product-card product-item" data-category="office">
+						<div class="product-image-real">
+							<img
+								src="images/office-container-3.jfif"
+								alt="Мобильный офис Стандарт" />
+							<div class="product-badge">Офисное</div>
+						</div>
+						<div class="product-content">
+							<div class="product-header">
+								<h3 class="product-title">Мобильный офис "Стандарт"</h3>
+								<div class="product-price">от 500 000 ₽</div>
+								<div class="product-period">базовое решение</div>
+							</div>
+
+							<p class="product-description">
+								Базовое решение для временного или постоянного офиса
+							</p>
+
+							<div class="product-features">
+								<div class="product-feature">Площадь: 25-30 м²</div>
+								<div class="product-feature">4-6 рабочих мест</div>
+								<div class="product-feature">Минимальная отделка</div>
+								<div class="product-feature">Возможность перемещения</div>
+								<div class="product-feature">Срок реализации: 1-2 недели</div>
+							</div>
+
+							<div class="product-actions">
+								<a href="contact.html" class="product-btn product-btn-primary">
+									Заказать консультацию
+								</a>
+								<button
+									class="product-btn product-btn-secondary"
+									onclick="showProductDetails('standard')">
+									Подробнее
+								</button>
+							</div>
+						</div>
+					</div>
+
+					<!-- Commercial Containers -->
+					<div
+						class="product-card product-item"
+						data-category="commercial"
+						id="commercial">
+						<div class="product-image-real">
+							<img
+								src="images/commerc-container.jfif"
+								alt="Жилой дом Комфорт" />
+							<div class="image-fallback">
+								<div class="icon">🏠</div>
+								<div>Торговый павильон</div>
+							</div>
+							<div class="product-badge">Коммерческое</div>
+						</div>
+						<div class="product-content">
+							<div class="product-header">
+								<h3 class="product-title">Торговый павильон</h3>
+								<div class="product-price">от 700 000 ₽</div>
+								<div class="product-period">под ключ</div>
+							</div>
+
+							<p class="product-description">
+								Готовое решение для розничной торговли и услуг
+							</p>
+
+							<div class="product-features">
+								<div class="product-feature">Площадь: 30-50 м²</div>
+								<div class="product-feature">
+									Торговый зал, складское помещение
+								</div>
+								<div class="product-feature">Витринные окна</div>
+								<div class="product-feature">Подключение к коммуникациям</div>
+								<div class="product-feature">Срок реализации: 2-3 недели</div>
+							</div>
+
+							<div class="product-actions">
+								<a href="contact.html" class="product-btn product-btn-primary">
+									Заказать консультацию
+								</a>
+								<button
+									class="product-btn product-btn-secondary"
+									onclick="showProductDetails('trading')">
+									Подробнее
+								</button>
+							</div>
+						</div>
+					</div>
+
+					<div class="product-card product-item" data-category="commercial">
+						<div class="product-image-real">
+							<img src="images/kafe-kontejner.jpg" alt="Жилой дом Комфорт" />
+							<div class="product-badge">Коммерческое</div>
+						</div>
+						<div class="product-content">
+							<div class="product-header">
+								<h3 class="product-title">Кафе-контейнер</h3>
+								<div class="product-price">от 900 000 ₽</div>
+								<div class="product-period">премиум решение</div>
+							</div>
+
+							<p class="product-description">
+								Стильное пространство для организации питания
+							</p>
+
+							<div class="product-features">
+								<div class="product-feature">Площадь: 35-55 м²</div>
+								<div class="product-feature">
+									Кухня, барная стойка, посадочные места
+								</div>
+								<div class="product-feature">Вентиляция и вытяжка</div>
+								<div class="product-feature">Дизайнерская отделка</div>
+								<div class="product-feature">Срок реализации: 4-5 недель</div>
+							</div>
+
+							<div class="product-actions">
+								<a href="contact.html" class="product-btn product-btn-primary">
+									Заказать консультацию
+								</a>
+								<button
+									class="product-btn product-btn-secondary"
+									onclick="showProductDetails('cafe')">
+									Подробнее
+								</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="cta">
+			<div>
+				<h2>Не нашли подходящий вариант?</h2>
+				<p>Мы разработаем индивидуальное решение специально для вас</p>
+				<a href="contact.html" class="btn btn-primary">Обсудить проект</a>
+			</div>
+		</section>
+
+		<footer>
+			<div class="container">
+				<div class="footer-content">
+					<div class="footer-section">
+						<h3>ContainerPro</h3>
+						<p>Инновационные контейнерные решения для жизни и бизнеса</p>
+					</div>
+					<div class="footer-section">
+						<h4>Контакты</h4>
+						<p>Email: info@containerpro.ru</p>
+						<p>Телефон: +7 (999) 123-45-67</p>
+						<p>Адрес: г. Москва, ул. Промышленная, д. 15</p>
+					</div>
+					<div class="footer-section">
+						<h4>Компания</h4>
+						<p>ООО "КонтейнерПро"</p>
+						<p>ИНН: 1234567890</p>
+						<p>ОГРН: 1234567890123</p>
+					</div>
+				</div>
+				<div class="footer-bottom">
+					<p>&copy; 2024 ContainerPro. Все права защищены.</p>
+				</div>
+			</div>
+		</footer>
+
+		<script src="script.js"></script>
+	</body>
+</html>
